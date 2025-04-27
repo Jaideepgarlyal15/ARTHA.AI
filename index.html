@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Artha.ai Waitlist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e3d35;
+      --bg-color: #f5f0e6;
+      --accent-color: #004643;
+      --font: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      min-height: 100vh;
+    }
+    nav {
+      width: 100%;
+      background-color: var(--accent-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    p.subtext {
+      font-size: 1.15rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      color: #555;
+    }
+
+    form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00675f;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: #999;
+    }
+
+    .faq-section {
+     max-width: 700px;
+     margin-top: 4rem;
+     background-color: white;
+     padding: 2rem;
+     border-radius: 10px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-section h2 {
+     font-size: 1.75rem;
+     margin-bottom: 1.5rem;
+    }
+
+       /* FAQ container */
+    .faq {
+     margin-bottom: 1rem;
+     border-bottom: 1px solid #ddd;
+     overflow: hidden;
+     transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+     max-height: 60px; /* Height of question only */
+     padding: 0;
+    }
+
+/* FAQ question button */
+    .faq button {
+      background: none;
+     border: none;
+     width: 100%;
+     text-align: left;
+     font-size: 1.1rem;
+     padding: 0.75rem 0;
+     cursor: pointer;
+     color: var(--primary-color);
+     font-weight: bold;
+     transition: color 0.2s ease;
+    }
+
+/* FAQ answer */
+    .faq p {
+     font-size: 0.95rem;
+     color: #444;
+     max-height: 1;
+     overflow: hidden;
+     transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+     padding: 0 0.5rem;
+     margin-top: 0;
+     opacity: 1;
+     margin-bottom: 0;
+    }
+
+/* Expanded FAQ */
+    .faq.open {
+     max-height: 300px;
+     Padding: 0.5rem 0.5rem;
+     opacity: 1;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqs = document.querySelectorAll('.faq');
+      faqs.forEach(faq => {
+        const btn = faq.querySelector('button');
+        btn.addEventListener('click', () => {
+           faqs.forEach(f => {
+             if (f !== faq) f.classList.remove('open');
+        });
+          faq.classList.toggle('open');
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="docs.html">Documentation</a>
+    </nav>
+    <img src="https://res.cloudinary.com/dgzwzs711/image/upload/v1745557943/Artha_logo_skgxie.png" alt="Artha.ai Logo" style="width: 150px; display: block; margin: 0 auto;">
+  <h1>Reimagine Real Estate with AI</h1>
+  <p class="subtext">Join the waitlist for Artha.ai and be one of the first to simplify your real estate workflows with intelligent automation. It's time to save hours and close more deals.</p>
+
+  <form action="https://formspree.io/f/xeogojgy" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+    <input type="hidden" name="_redirect" value="https://artha.ai/thank-you.html">
+    <button type="submit">Join the Waitlist</button>
+  </form>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <button>What is Artha.ai?</button>
+      <p>Artha.ai is an AI-powered automation platform for real estate agents and agencies. We help automate lead follow-ups, reports, and communication so you can focus on selling more efficiently.</p>
+    </div>
+
+    <div class="faq">
+      <button>Who is this for?</button>
+      <p>It’s designed for individual agents, small firms, and corporate brokerages looking to streamline operations and boost client satisfaction using smart automation.</p>
+    </div>
+
+    <div class="faq">
+      <button>When will Artha.ai launch?</button>
+      <p>We are currently in the early access phase. Users on the waitlist will get early access invites starting Q3 2025.</p>
+    </div>
+
+    <div class="faq">
+      <button>What are the pricing plans?</button>
+      <p>Our services currently start at $149/month… More advanced features and optimized pricing options will be announced soon. </p>
+    </div>
+
+    <div class="faq">
+      <button>How do I stay updated?</button>
+      <p>Once you join the waitlist, you’ll receive regular email updates with behind the scenes progress, sneak peeks, and invite links when we go live.</p>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 Artha.ai. Built with purpose. All rights reserved.
+  </div>
+</body>
+</html>
